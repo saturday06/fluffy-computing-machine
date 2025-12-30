@@ -41,4 +41,4 @@ for blender_version in \
   ln -Tfs "${PWD}/src/fluffy_computing_machine" "${HOME}/.config/blender/$blender_version/extensions/user_default/fluffy_computing_machine"
 done
 
-blender --background --python-expr 'import bpy; bpy.ops.preferences.addon_enable(module="fluffy_computing_machine"); bpy.ops.wm.save_userpref()'
+blender --background --python-expr 'import bpy; bpy.ops.preferences.addon_enable(module="bl_ext.user_default.fluffy_computing_machine"); bpy.ops.wm.save_userpref()'

@@ -1,6 +1,6 @@
 schema_version = "1.0.0"
 
-id = "fluffy-computing-machine"
+id = "fluffy_computing_machine"
 version = "1.0.0"
 
 name = "Fluffy Computing Machine"
