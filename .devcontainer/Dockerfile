@@ -39,8 +39,8 @@ export DISPLAY=:0
 export UV_LINK_MODE=copy
 SHELL_PROFILE_SCRIPT
 
-  mkdir -p ~/.vnc
-  cat <<'VNC_XSTARTUP_SCRIPT' >>~/.vnc/xstartup
+  mkdir -p ~/.config/tigervnc
+  cat <<'VNC_XSTARTUP_SCRIPT' >>~/.config/tigervnc/xstartup
 #!/bin/bash
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
@@ -49,7 +49,7 @@ xterm &
 (while sleep 1; do xterm -e blender --python-expr "import debugpy; debugpy.listen(5678)" --open-last || true; done) &
 exec openbox-session
 VNC_XSTARTUP_SCRIPT
-  chmod +x ~/.vnc/xstartup
+  chmod +x ~/.config/tigervnc/xstartup
 
   mkdir -p Desktop Documents Downloads Music Pictures Videos
   # https://docs.astral.sh/uv/getting-started/installation/
