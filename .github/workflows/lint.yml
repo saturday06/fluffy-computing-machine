@@ -1,0 +1,52 @@
+# SPDX-License-Identifier: MIT OR GPL-3.0-or-later
+name: lint
+
+permissions: {}
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+  push:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Install deb packages
+        run: sudo ./tools/install_ubuntu_packages.sh
+      - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
+        with:
+          deno-version-file: .dvmrc
+      - uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
+      - name: Install UV dependencies
+        run: |
+          for _ in $(seq 5); do
+            if uv sync; then
+              break
+            fi
+          done
+      - name: Check source code formatting
+        run: |
+          ./tools/format.sh
+          git diff --exit-code
+      - name: Install hadolint
+        run: ./tools/install_hadolint.sh
+      - name: Lint
+        run: ./tools/lint.sh
+
+  super-linter:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          ref: main # for super-linter
+          persist-credentials: false
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Super-Linter
+        run: ./tools/super-linter.sh

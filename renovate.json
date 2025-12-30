@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "schedule:weekends",
+    ":automergeAll",
+    ":disableDependencyDashboard",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "minimumReleaseAge": "14 days",
+  "lockFileMaintenance": {
+    "groupName": "regular dependency updates",
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "regular dependency updates",
+      "matchPackageNames": ["*"]
+    },
+    {
+      "matchCategories": ["python"],
+      "matchPackageNames": ["python", "bpy"],
+      "rangeStrategy": "in-range-only"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^.dvmrc$/"],
+      "matchStrings": ["(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "denoland/deno"
+    }
+  ]
+}

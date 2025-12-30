@@ -1,0 +1,55 @@
+{
+  "last-release-sha": "7d31010b0ec173988528db8a6c776f1aedd0b1e1",
+  "bootstrap-sha": "7d31010b0ec173988528db8a6c776f1aedd0b1e1",
+  "draft": true,
+  "draft-pull-request": true,
+  "changelog-sections": [
+    {
+      "type": "BREAKING CHANGE",
+      "section": "💥 Breaking Changes"
+    },
+    {
+      "type": "feat",
+      "section": "🚀 Features"
+    },
+    {
+      "type": "fix",
+      "section": "🐛 Bug Fixes"
+    },
+    {
+      "type": "perf",
+      "section": "📈 Performance Improvements"
+    },
+    {
+      "type": "docs",
+      "section": "📝 Documentation"
+    }
+  ],
+  "packages": {
+    ".": {
+      "pull-request-title-pattern": "chore${scope}: 🤖 release${component} ${version}",
+      "release-type": "simple",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "src/fluffy_computing_machine/__init__.py"
+        },
+        {
+          "type": "toml",
+          "path": "pyproject.toml",
+          "jsonpath": "$.project.version"
+        },
+        {
+          "type": "toml",
+          "path": "uv.lock",
+          "jsonpath": "$.package[?(@.name.value == 'fluffy-computing-machine')].version"
+        },
+        {
+          "type": "toml",
+          "path": "src/fluffy_computing_machine/blender_manifest.toml",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}
