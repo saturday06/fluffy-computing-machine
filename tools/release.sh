@@ -17,7 +17,7 @@ shellcheck "$0"
 cd "$(dirname "$0")/.."
 
 export PYTHONDONTWRITEBYTECODE=1
-prefix_name=fluffy-computing-machine
+prefix_name=Fluffy-Computing-Machine
 
 if ! git status; then
   uname -a
