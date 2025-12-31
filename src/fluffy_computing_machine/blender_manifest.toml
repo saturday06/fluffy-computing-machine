@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "fluffy_computing_machine"
-version = "1.1.0"
+version = "1.2.0"
 
 name = "Fluffy Computing Machine"
 tagline = "Yo"

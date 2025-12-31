@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/saturday06/fluffy-computing-machine/compare/v1.1.0...v1.2.0) (2025-12-31)
+
+
+### 🚀 Features
+
+* add extension name ([1c3e07e](https://github.com/saturday06/fluffy-computing-machine/commit/1c3e07e9333ad4697f11529849660dff4ba64ffd))
+
 ## [1.1.0](https://github.com/saturday06/fluffy-computing-machine/compare/v1.0.0...v1.1.0) (2025-12-31)
 
 
