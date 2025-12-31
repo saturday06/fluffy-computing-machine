@@ -87,7 +87,7 @@ if ! gh release view "$release_tag_name"; then
   exit 1
 fi
 
-gh release upload "$release_tag_name" "${extension_path}#Extension ${version} (zip)"
+gh release upload "$release_tag_name" "${extension_path}#Fluffy-Computing-Machine-Extension ${version} (zip)"
 
 # Create release notes for Blender Extensions
 github_release_body_path=$(mktemp)
