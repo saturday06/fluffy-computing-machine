@@ -287,7 +287,7 @@ wheels = [
 [[package]]
 name = "starry-bpy-typings"
 version = "3.17.5"
-source = { git = "https://github.com/saturday06/VRM-Addon-for-Blender?subdirectory=typings&branch=main#f41a660f8c9cc5d063189f3685f289b5d3aeb87d" }
+source = { git = "https://github.com/saturday06/VRM-Addon-for-Blender?subdirectory=typings&branch=main#7c68d28b639e05a81e10fb24ed76172bc599a0ce" }
 
 [[package]]
 name = "tqdm"
