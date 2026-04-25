@@ -1,10 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 # SPDX-License-Identifier: MIT OR GPL-3.0-or-later
 
-set -eux
+set -eux -o pipefail
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")"
 
+repository_root_path=$(
+  cd ..
+  pwd
+)
 cached_image_path=
 cached_image_id=
 if [ "${CI:-}" = "true" ]; then
@@ -31,8 +35,8 @@ docker \
   --tag \
   "$super_linter_tag_name" \
   --file \
-  tools/super-linter.dockerfile \
-  .
+  super-linter.dockerfile \
+  "$repository_root_path"
 
 new_image_id=$(docker image inspect --format='{{.Id}}' "$super_linter_tag_name")
 if [ -n "$cached_image_path" ] && [ "$cached_image_id" != "$new_image_id" ]; then
@@ -43,4 +47,17 @@ if [ -n "$cached_image_path" ] && [ "$cached_image_id" != "$new_image_id" ]; the
 fi
 
 # Run the built super-linter.
-exec docker run --rm -v "${PWD}:/tmp/lint" "$super_linter_tag_name"
+# Assume an environment where bind mounts are not available, so perform a shallow copy
+# of the repository to be linted into the container and run it.
+super_linter_container_name="${super_linter_tag_name}-container"
+docker container rm --force "$super_linter_container_name" || true
+docker container create --rm --name "$super_linter_container_name" "$@" "$super_linter_tag_name"
+lint_path=$(mktemp -d)
+git clone --no-local --depth 1 "$repository_root_path" "$lint_path"
+git -C "$repository_root_path" ls-files --cached --others --exclude-standard -z |
+  rsync --archive --files-from=- --from0 --delete-missing-args "${repository_root_path}/" "${lint_path}/"
+git -C "$lint_path" status --porcelain
+docker container cp "${lint_path}/." "${super_linter_container_name}:/tmp/lint/"
+docker container start --attach "$super_linter_container_name"
+
+: ----- OK ----- : +
