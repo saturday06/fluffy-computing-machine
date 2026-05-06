@@ -22,6 +22,7 @@ dev = [
   "requests",
   "ruff",
   "starry-bpy-typings",
+  "tomli",
   "tqdm",
   "ty",
   "types-pygit2",
