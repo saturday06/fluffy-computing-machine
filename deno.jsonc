@@ -1,7 +1,4 @@
 {
-  "lock": {
-    "frozen": true
-  },
   "exclude": [
     ".cache/",
     "CHANGELOG.md"
@@ -16,14 +13,30 @@
       "ffi": true,
       "read": true,
       "run": true,
-      "sys": true,
+      "sys": [
+        "osRelease"
+      ],
       "write": true
     },
     "update-changelog": {
-      "env": ["GITHUB_TOKEN", "GH_TOKEN", "IGNORE_TEST_WIN32"],
-      "net": true,
-      "read": [".git/config"],
-      "write": ["CHANGELOG.md"]
+      "env": {
+        "allow": [
+          "GITHUB_TOKEN",
+          "GH_TOKEN"
+        ],
+        "ignore": [
+          "IGNORE_TEST_WIN32"
+        ]
+      },
+      "net": [
+        "api.github.com:443"
+      ],
+      "read": [
+        ".git"
+      ],
+      "write": [
+        "CHANGELOG.md"
+      ]
     }
   },
   // Workaround for VitePress
