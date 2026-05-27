@@ -22,7 +22,7 @@ dev = [
   "requests",
   "ruff",
   "starry-bpy-typings",
-  "tomli",
+  "tomli", # for codespell
   "tqdm",
   "ty",
   "types-pygit2",
