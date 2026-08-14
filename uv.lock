@@ -284,7 +284,7 @@ wheels = [
 [[package]]
 name = "starry-bpy-typings"
 version = "4.5.0"
-source = { git = "https://github.com/saturday06/VRM-Addon-for-Blender?subdirectory=typings&branch=main#de6ab44bb02c81723485d2cc4df6b5a19aa06c6a" }
+source = { git = "https://github.com/saturday06/VRM-Addon-for-Blender?subdirectory=typings&branch=main#fd84fe43c4cca9832376b2a494901f14a598993d" }
 
 [[package]]
 name = "tomli"
