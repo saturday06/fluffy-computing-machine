@@ -6,7 +6,7 @@
     "npm:@octokit/types@17.0.0": "17.0.0",
     "npm:@types/node@26.5.1": "26.5.1",
     "npm:isomorphic-git@1.41.9": "1.41.9",
-    "npm:pyright@1.1.413": "1.1.413"
+    "npm:pyright@1.1.414": "1.1.414"
   },
   "npm": {
     "@devcontainers/cli@0.89.0": {
@@ -351,8 +351,8 @@
     "process@0.11.10": {
       "integrity": "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A=="
     },
-    "pyright@1.1.413": {
-      "integrity": "sha512-1lpxKrh0DHHpfAQOfciZo2ojua2jase3wwO9at8kldc+F/p1PBscxA5CQ3G1qg5lMOMhXo6ZaiMLMXEAqADIAg==",
+    "pyright@1.1.414": {
+      "integrity": "sha512-FPZZb51jepDX4eP7TEYDeNFtmE3WgwkkEcJpvH3/QmUSsj0EAy3LXu+xB4T/FWDejtsXlCfFr/rbWFjwuwuXww==",
       "optionalDependencies": [
         "fsevents"
       ],
@@ -453,7 +453,7 @@
       "npm:@octokit/types@17.0.0",
       "npm:@types/node@26.5.1",
       "npm:isomorphic-git@1.41.9",
-      "npm:pyright@1.1.413"
+      "npm:pyright@1.1.414"
     ]
   }
 }
