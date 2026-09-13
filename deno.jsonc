@@ -88,7 +88,7 @@
     "@octokit/rest": "npm:@octokit/rest@22.0.1",
     "@octokit/types": "npm:@octokit/types@17.0.0",
     "@types/node": "npm:@types/node@26.5.1",
-    "isomorphic-git": "npm:isomorphic-git@1.41.9",
+    "isomorphic-git": "npm:isomorphic-git@1.42.0",
     "pyright": "npm:pyright@1.1.414"
   }
 }
