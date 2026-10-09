@@ -4,8 +4,8 @@
     "npm:@devcontainers/cli@0.89.0": "0.89.0",
     "npm:@octokit/rest@22.0.1": "22.0.1",
     "npm:@octokit/types@17.0.0": "17.0.0",
-    "npm:@types/node@26.6.2": "26.6.2",
-    "npm:isomorphic-git@1.42.2": "1.42.2",
+    "npm:@types/node@26.6.4": "26.6.4",
+    "npm:isomorphic-git@1.43.1": "1.43.1",
     "npm:pyright@1.1.414": "1.1.414"
   },
   "npm": {
@@ -107,8 +107,8 @@
         "@octokit/openapi-types@28.0.0"
       ]
     },
-    "@types/node@26.6.2": {
-      "integrity": "sha512-X1P21scMv4zGKLYqjdGjaKa7COa0RKVYYZZN/NfvLQ1JegxFhdhpZG/Lyn8AXx6CDUavKAd11v6BvfpkDByK8g==",
+    "@types/node@26.6.4": {
+      "integrity": "sha512-ldVPDCzj7fsaGZrLB0NuHuTvJcsNasysBAqMolr/cgxrLd1xbqxIr3XJiPnHHJUCxj5sNF1vnRj9aWnrVh5Jcg==",
       "dependencies": [
         "undici-types"
       ]
@@ -298,8 +298,8 @@
     "isarray@2.0.5": {
       "integrity": "sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw=="
     },
-    "isomorphic-git@1.42.2": {
-      "integrity": "sha512-Rb7czWhLO4JYqmg4an01nNomuAgFbWWK2CVfkHGBOvK5t7hrGTKOXPx/csscJ1j9o3uXFzNcC6njgvCafSmIPw==",
+    "isomorphic-git@1.43.1": {
+      "integrity": "sha512-88y5HlB8RfZDwWsWyV/wBuXOLfnoZ5Sa7zrfledz/cWkhVxNHRVl105/MGfsReELV7PxChe5jJUphbAl1sKnHQ==",
       "dependencies": [
         "async-lock",
         "clean-git-ref",
@@ -358,8 +358,8 @@
       ],
       "bin": true
     },
-    "readable-stream@4.7.0": {
-      "integrity": "sha512-oIGGmcpTLwPga8Bn6/Z75SVaH1z5dUut2ibSyAMVhmUggWpmDn2dapB0n7f8nwaSiRtepAsfJyfXIO5DCVAODg==",
+    "readable-stream@4.8.0": {
+      "integrity": "sha512-2jhTTU3Eilp/2DMT71gbcoqC35eQHasMJH0RHkYxwlxIv3+FR6Y5xAFZIwEGLxKkjZYEFlsiMNIdwUqjK2lLHQ==",
       "dependencies": [
         "abort-controller",
         "buffer",
@@ -430,8 +430,8 @@
     "universal-user-agent@7.0.3": {
       "integrity": "sha512-TmnEAEAsBJVZM/AADELsK76llnwcf9vMKuPz8JflO1frO8Lchitr0fNaN9d+Ap0BjKtqWqd/J17qeDnXh8CL2A=="
     },
-    "which-typed-array@1.1.23": {
-      "integrity": "sha512-JMh8aK+1B/0bk/YNupICmH5MgCq6yNLKYQUfsZtSDLLCCmxUkHjUY+oOlIa90lO7lHN1woAfpenLdlKpXy9o+A==",
+    "which-typed-array@1.1.24": {
+      "integrity": "sha512-wk4Mf4pR5mRP7eYuuTBCIQ9d0ud2Fv2jRLQpfgnRjbOxAFHmjKFValgTpitVKzJJS8ajnYQV2Du1SZ8j6b/EUQ==",
       "dependencies": [
         "available-typed-arrays",
         "call-bind",
@@ -451,8 +451,8 @@
       "npm:@devcontainers/cli@0.89.0",
       "npm:@octokit/rest@22.0.1",
       "npm:@octokit/types@17.0.0",
-      "npm:@types/node@26.6.2",
-      "npm:isomorphic-git@1.42.2",
+      "npm:@types/node@26.6.4",
+      "npm:isomorphic-git@1.43.1",
       "npm:pyright@1.1.414"
     ]
   }
